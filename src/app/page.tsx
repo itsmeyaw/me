@@ -1,16 +1,62 @@
 import Image from "next/image";
 
+interface BioSectionProps {
+  title: string;
+  items: string[];
+}
+
+function BioSection({ title, items }: BioSectionProps) {
+  return (
+    <div className="space-y-2">
+      <h3 className="text-white/90 text-sm font-medium drop-shadow-lg font-[family-name:var(--font-manrope)] uppercase tracking-wider">
+        {title}
+      </h3>
+      <div className="space-y-1">
+        {items.map((item, index) => (
+          <p key={index} className="text-white text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
+            {item}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
+  const bioSections = [
+    {
+      title: "Professional",
+      items: [
+        "Full-stack developer at Siemens",
+        "Head of IT & Development at TUM Blockchain Club"
+      ]
+    },
+    {
+      title: "Academic",
+      items: [
+        "Master's Student at TUM",
+        "Tutor for Applied Crypto. for Dec. Sys. (ACDS)"
+      ]
+    },
+    {
+      title: "About Me",
+      items: [
+        "Focusing on AI, LLMs, and Cybersecurity",
+        "Enjoying reading, music, and vibe coding"
+      ]
+    }
+  ];
+
   const links = [
     {
       title: "LinkedIn",
       url: "https://linkedin.com/in/itsmeyaw",
-      description: "Connect professionally"
+      description: "Let's connect professionally"
     },
     {
       title: "GitHub",
       url: "https://github.com/itsmeyaw",
-      description: "Code & projects"
+      description: "My code & projects"
     },
     {
       title: "Instagram",
@@ -55,7 +101,13 @@ export default function Home() {
             <div className="absolute inset-0 rounded-full border border-white/40 shadow-inner"></div>
             {/* Content */}
             <div className="relative flex items-center justify-center w-full h-full">
-              <span className="text-white text-4xl font-bold drop-shadow-2xl">YW</span>
+              <Image
+                src="/profile_pic.jpg"
+                alt="Profile Picture"
+                width={120}
+                height={120}
+                className="rounded-full object-cover"
+              />
             </div>
             {/* Top highlight */}
             <div className="absolute top-3 left-5 w-6 h-3 bg-white/40 rounded-full blur-sm"></div>
@@ -82,11 +134,10 @@ export default function Home() {
             {/* Top highlight */}
             <div className="absolute top-2 left-6 right-6 h-4 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full blur-sm"></div>
             {/* Content */}
-            <div className="relative p-8">
-              <p className="text-white leading-relaxed drop-shadow-xl font-[family-name:var(--font-sora)]">
-                Student at TUM and full-stack developer at Siemens.
-                <br/>Currently focusing on AI, LLMs, and Blockchain.
-              </p>
+            <div className="relative p-8 space-y-6">
+              {bioSections.map((section, index) => (
+                <BioSection key={index} title={section.title} items={section.items} />
+              ))}
             </div>
           </div>
         </div>
@@ -130,19 +181,21 @@ export default function Home() {
 
         {/* Footer */}
         <div className="text-center mt-16">
-          <div className="relative inline-flex items-center space-x-3">
+          <div className="relative inline-flex items-center justify-center space-x-3">
             {/* Glass base */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/22 via-white/18 to-white/20 backdrop-blur-md rounded-full shadow-xl"></div>
+            <div className="w-full absolute inset-0 bg-gradient-to-r from-white/22 via-white/18 to-white/20 backdrop-blur-md rounded-full shadow-xl"></div>
             {/* Inner highlight */}
             <div className="absolute inset-1 bg-gradient-to-r from-white/15 to-transparent rounded-full"></div>
             {/* Border */}
-            <div className="absolute inset-0 rounded-full border border-white/35 shadow-inner"></div>
+            <div className="w-full absolute inset-0 rounded-full border border-white/35 shadow-inner"></div>
             {/* Top highlight */}
             <div className="absolute top-1 left-4 right-4 h-2 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-full blur-sm"></div>
             {/* Content */}
-            <div className="relative px-8 py-4 flex items-center space-x-3">
-              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/40"></div>
-              <span className="text-white text-sm font-medium drop-shadow-2xl font-[family-name:var(--font-sora)]">Available for new opportunities</span>
+            <div className="relative px-8 py-4">
+              <div className="flex items-center justify-center space-x-3">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/40"></div>
+                <span className="text-white text-sm font-medium drop-shadow-2xl font-[family-name:var(--font-sora)]">Available for new challenges</span>
+              </div>
             </div>
           </div>
         </div>
