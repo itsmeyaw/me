@@ -3,33 +3,28 @@ import Image from "next/image";
 export default function Home() {
   const links = [
     {
-      title: "Portfolio",
-      url: "https://example.com",
-      description: "View my work"
-    },
-    {
       title: "LinkedIn",
-      url: "https://linkedin.com/in/username",
+      url: "https://linkedin.com/in/itsmeyaw",
       description: "Connect professionally"
     },
     {
       title: "GitHub",
-      url: "https://github.com/username",
+      url: "https://github.com/itsmeyaw",
       description: "Code & projects"
     },
     {
-      title: "Twitter",
-      url: "https://twitter.com/username",
-      description: "Thoughts & updates"
-    },
-    {
       title: "Instagram",
-      url: "https://instagram.com/username",
+      url: "https://instagram.com/itsmeyaw.id",
       description: "Behind the scenes"
     },
     {
+      title: "Website",
+      url: "https://itsmeyaw.id",
+      description: "My personal website"
+    },
+    {
       title: "Email",
-      url: "mailto:hello@example.com",
+      url: "mailto:yudhistira.wibowo@itsmeyaw.id",
       description: "Get in touch"
     }
   ];
@@ -60,20 +55,20 @@ export default function Home() {
             <div className="absolute inset-0 rounded-full border border-white/40 shadow-inner"></div>
             {/* Content */}
             <div className="relative flex items-center justify-center w-full h-full">
-              <span className="text-white text-4xl font-bold drop-shadow-2xl">JD</span>
+              <span className="text-white text-4xl font-bold drop-shadow-2xl">YW</span>
             </div>
             {/* Top highlight */}
             <div className="absolute top-3 left-5 w-6 h-3 bg-white/40 rounded-full blur-sm"></div>
           </div>
           
           {/* Name */}
-          <h1 className="text-4xl font-bold text-white mb-3 drop-shadow-2xl">
-            John Doe
+          <h1 className="text-4xl font-extrabold text-white drop-shadow-2xl font-[family-name:var(--font-manrope)]">
+            Yudhistira Arief Wibowo
           </h1>
           
           {/* Title */}
-          <p className="text-xl text-white mb-6 font-medium drop-shadow-xl">
-            Product Designer & Developer
+          <p className="text-xl text-white mb-6 font-medium drop-shadow-xl font-[family-name:var(--font-sora)]">
+            Software Engineer & Student
           </p>
           
           {/* Bio */}
@@ -88,8 +83,9 @@ export default function Home() {
             <div className="absolute top-2 left-6 right-6 h-4 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full blur-sm"></div>
             {/* Content */}
             <div className="relative p-8">
-              <p className="text-white leading-relaxed drop-shadow-xl">
-                Passionate about creating digital experiences that make a difference. I blend design thinking with technical expertise to build products people love.
+              <p className="text-white leading-relaxed drop-shadow-xl font-[family-name:var(--font-sora)]">
+                Student at TUM and full-stack developer at Siemens.
+                <br/>Currently focusing on AI, LLMs, and Blockchain.
               </p>
             </div>
           </div>
@@ -117,10 +113,10 @@ export default function Home() {
               <div className="relative px-12 py-4">
                 <div className="flex items-center justify-center">
                   <div className="text-center">
-                    <h3 className="font-semibold text-white text-lg drop-shadow-2xl">
+                    <h3 className="font-bold text-white text-lg drop-shadow-2xl font-[family-name:var(--font-manrope)]">
                       {link.title}
                     </h3>
-                    <p className="text-white/95 text-sm drop-shadow-xl">
+                    <p className="text-white/95 text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
                       {link.description}
                     </p>
                   </div>
@@ -146,7 +142,7 @@ export default function Home() {
             {/* Content */}
             <div className="relative px-8 py-4 flex items-center space-x-3">
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/40"></div>
-              <span className="text-white text-sm font-medium drop-shadow-2xl">Available for new opportunities</span>
+              <span className="text-white text-sm font-medium drop-shadow-2xl font-[family-name:var(--font-sora)]">Available for new opportunities</span>
             </div>
           </div>
         </div>
