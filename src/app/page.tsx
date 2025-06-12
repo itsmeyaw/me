@@ -161,13 +161,13 @@ export default function Home() {
               {/* Top glass highlight */}
               <div className="absolute top-2 left-8 right-8 h-2 bg-gradient-to-r from-transparent via-white/25 to-transparent rounded-full blur-sm group-hover:via-white/35 transition-all duration-400"></div>
               {/* Content */}
-              <div className="relative px-12 py-4">
+              <div className="relative px-12 py-3 md:py-4">
                 <div className="flex items-center justify-center">
                   <div className="text-center">
                     <h3 className="font-bold text-white text-base md:text-lg drop-shadow-2xl font-[family-name:var(--font-manrope)]">
                       {link.title}
                     </h3>
-                    <p className="text-white/95 text-xs md:text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
+                    <p className="text-white/95 mt-1 md:mt-0 text-xs md:text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
                       {link.description}
                     </p>
                   </div>
