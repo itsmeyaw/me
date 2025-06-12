@@ -8,12 +8,12 @@ interface BioSectionProps {
 function BioSection({ title, items }: BioSectionProps) {
   return (
     <div className="space-y-2">
-      <h3 className="text-white/90 text-sm font-medium drop-shadow-lg font-[family-name:var(--font-manrope)] uppercase tracking-wider">
+      <h3 className="text-white/90 text-xs md:text-sm font-medium drop-shadow-lg font-[family-name:var(--font-manrope)] uppercase tracking-wider">
         {title}
       </h3>
       <div className="space-y-1">
         {items.map((item, index) => (
-          <p key={index} className="text-white text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
+          <p key={index} className="text-white text-xs md:text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
             {item}
           </p>
         ))}
@@ -114,12 +114,12 @@ export default function Home() {
           </div>
           
           {/* Name */}
-          <h1 className="text-4xl font-extrabold text-white drop-shadow-2xl font-[family-name:var(--font-manrope)]">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-2xl font-[family-name:var(--font-manrope)]">
             Yudhistira Arief Wibowo
           </h1>
           
           {/* Title */}
-          <p className="text-xl text-white mb-6 font-medium drop-shadow-xl font-[family-name:var(--font-sora)]">
+          <p className="text-lg md:text-xl text-white mb-6 font-medium drop-shadow-xl font-[family-name:var(--font-sora)]">
             Software Engineer & Student
           </p>
           
@@ -164,10 +164,10 @@ export default function Home() {
               <div className="relative px-12 py-4">
                 <div className="flex items-center justify-center">
                   <div className="text-center">
-                    <h3 className="font-bold text-white text-lg drop-shadow-2xl font-[family-name:var(--font-manrope)]">
+                    <h3 className="font-bold text-white text-base md:text-lg drop-shadow-2xl font-[family-name:var(--font-manrope)]">
                       {link.title}
                     </h3>
-                    <p className="text-white/95 text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
+                    <p className="text-white/95 text-xs md:text-sm drop-shadow-xl font-[family-name:var(--font-sora)]">
                       {link.description}
                     </p>
                   </div>
@@ -194,7 +194,7 @@ export default function Home() {
             <div className="relative px-8 py-4">
               <div className="flex items-center justify-center space-x-3">
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg shadow-green-400/40"></div>
-                <span className="text-white text-sm font-medium drop-shadow-2xl font-[family-name:var(--font-sora)]">Available for new challenges</span>
+                <span className="text-white text-xs md:text-sm font-medium drop-shadow-2xl font-[family-name:var(--font-sora)]">Available for new challenges</span>
               </div>
             </div>
           </div>
