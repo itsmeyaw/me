@@ -199,6 +199,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Open Source Note */}
+        <div className="text-center mt-16 mb-8">
+          <p className="text-white/60 text-xs font-[family-name:var(--font-sora)] drop-shadow-lg">
+            This website is{" "}
+            <a 
+              href="https://github.com/itsmeyaw/me" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-white underline underline-offset-2 transition-colors duration-200"
+            >
+              open sourced on GitHub
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
